@@ -3,6 +3,7 @@ export class CheckoutPage {
  
   
     constructor(page) {
+
       this.page = page;
       this.firstNameInput = page.locator('[data-test="firstName"]');
       this.lastNameInput = page.locator('[data-test="lastName"]');
@@ -10,6 +11,7 @@ export class CheckoutPage {
       this.continueButton = page.locator('[data-test="continue"]');
       this.finishButton = page.locator('[data-test="finish"]');
       this.confirmationMessage = page.locator('.complete-header');
+      
     }
   
     async fillInformation(first, last, zip) {

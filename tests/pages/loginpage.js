@@ -4,12 +4,12 @@ export class LoginPage {
     constructor(page){
 
         this.page = page;
-        this.username = '#user-name';
-        this.password = '#password';
-        this.loginButton = '#login-button';
+        this.username = page.locator('#user-name');
+        this.password = page.locator('#password');
+        this.loginButton = page.locator('#login-button');
     }
 
-    async loginToApplication(){
+    async loginToApplication(username, password){
 
         await this.usernameInput.fill(username);
         await this.passwordInput.fill(password);
